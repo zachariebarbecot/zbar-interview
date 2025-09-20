@@ -12,6 +12,7 @@
 	</parent>
 	<modules>
 		<module>zbar-interview-app</module>
+		<module>zbar-interview-candidate</module>
 		<module>zbar-interview-common</module>
 	</modules>
 	<properties>
@@ -22,6 +23,11 @@
 			<dependency>
 				<groupId>f${project.groupId}</groupId>
 				<artifactId>zbar-interview-app</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>zbar-interview-common</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>

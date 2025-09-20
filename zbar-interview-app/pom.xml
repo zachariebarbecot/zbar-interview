@@ -12,6 +12,11 @@
 	<dependencies>
 		<dependency>
 			<groupId>${project.parent.groupId}</groupId>
+			<artifactId>zbar-interview-candidate</artifactId>
+			<version>${project.parent.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>${project.parent.groupId}</groupId>
 			<artifactId>zbar-interview-common</artifactId>
 			<version>${project.parent.version}</version>
 		</dependency>
@@ -30,4 +35,20 @@
 			<optional>true</optional>
 		</dependency>
 	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<exclude>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
