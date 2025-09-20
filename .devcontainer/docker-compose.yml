@@ -1,0 +1,31 @@
+services:
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/workspace:cached
+      - ${REPO_PATH}/m2:/home/java/.m2/repository:cached
+    command: sleep infinity
+    user: java
+    depends_on:
+      - postgres
+    networks:
+      - dev-network
+
+  postgres:
+    image: postgres:17
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    ports:
+      - "5432:5432"
+    volumes:
+      - ${REPO_PATH}/postgres:/var/lib/postgresql/data
+    networks:
+      - dev-network
+
+networks:
+  dev-network:

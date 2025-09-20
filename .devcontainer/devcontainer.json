@@ -1,0 +1,8 @@
+{
+  "name": "Java 21 + Maven",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "dev",
+  "postCreateCommand": "mvn -v || true",
+  "remoteUser": "java",
+  "workspaceFolder": "/workspace",
+}
