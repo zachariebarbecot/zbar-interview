@@ -1,4 +1,4 @@
-package fr.zbar.interview.app.data.bus;
+package fr.zbar.interview.app.data.spring;
 
 import fr.zbar.interview.candidate.CreateCandidateCommandHandler;
 import fr.zbar.interview.candidate.command.CreateCandidateCommand;

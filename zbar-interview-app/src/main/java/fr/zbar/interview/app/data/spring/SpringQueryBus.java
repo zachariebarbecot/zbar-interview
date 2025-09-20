@@ -1,4 +1,4 @@
-package fr.zbar.interview.app.data.bus;
+package fr.zbar.interview.app.data.spring;
 
 import fr.zbar.interview.common.query.Query;
 import fr.zbar.interview.common.query.QueryBus;
